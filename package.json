@@ -1,0 +1,31 @@
+{
+	"name": "shared2-lib",
+	"version": "1.0.0",
+	"description": "",
+	"type": "module",
+	"main": "dist/index.cjs",
+	"module": "dist/index.mjs",
+	"scripts": {
+		"build": "rimraf dist && rollup -c",
+		"release": "rimraf ./dist && rollup -c && pnpm publish",
+		"dev": "rollup -c --watch"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"@babel/core": "^7.20.5",
+		"@rollup/plugin-alias": "^4.0.2",
+		"@rollup/plugin-babel": "^6.0.3",
+		"@rollup/plugin-commonjs": "^24.0.0",
+		"@rollup/plugin-json": "^6.0.0",
+		"@rollup/plugin-node-resolve": "^15.0.1",
+		"esbuild": "^0.16.9",
+		"rimraf": "^3.0.2",
+		"rollup": "^3.7.5",
+		"rollup-plugin-dts": "^5.0.0",
+		"rollup-plugin-esbuild": "^5.0.0",
+		"rollup-plugin-typescript2": "^0.34.1",
+		"typescript": "^4.9.4"
+	}
+}
