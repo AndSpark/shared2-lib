@@ -1,6 +1,6 @@
 {
 	"name": "shared2-lib",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "",
 	"type": "module",
 	"types": "dist/index.d.ts",
@@ -8,7 +8,7 @@
 	"module": "dist/index.mjs",
 	"scripts": {
 		"build": "rimraf dist && rollup -c",
-		"release": "rimraf ./dist && rollup -c && pnpm publish",
+		"release": "rimraf ./dist && rollup -c && yarn publish",
 		"dev": "rollup -c --watch"
 	},
 	"keywords": [],
