@@ -6,7 +6,7 @@ export function isIdCard(tex: string) {
 	num = num.toUpperCase()
 	var len, re
 	len = num.length
-	if (len == 0) return true
+	if (len == 0) return false
 	//身份证号码为15位或者18位，15位时全为数字，18位前17位为数字，最后一位是校验位，可能为数字或字符X。
 	if (!/(^\d{15}$)|(^\d{17}([0-9]|X)$)/.test(num)) {
 		return false
