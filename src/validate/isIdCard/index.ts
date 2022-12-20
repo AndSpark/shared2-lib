@@ -50,7 +50,7 @@ export function isIdCard(tex: string) {
 		91: '国外',
 	}
 
-	if (aCity[parseInt(num.substring(0, 2))] == null) {
+	if (aCity[parseInt(num.substr(0, 2))] == null) {
 		return false
 	}
 
@@ -91,10 +91,10 @@ export function isIdCard(tex: string) {
 			var nTemp = 0,
 				i
 			for (i = 0; i < 17; i++) {
-				nTemp += Number(num.substring(i, 1)) * arrInt[i]
+				nTemp += Number(num.substr(i, 1)) * arrInt[i]
 			}
 			valnum = arrCh[nTemp % 11]
-			if (valnum != num.substring(17, 1)) {
+			if (valnum != num.substr(17, 1)) {
 				return false
 			}
 		}

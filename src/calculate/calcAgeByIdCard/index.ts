@@ -7,11 +7,11 @@ export function calcAgeByIdCard(identityCard: string): number {
 	if (len == 18) {
 		//处理18位的身份证号码从号码中得到生日和性别代码
 		strBirthday =
-			identityCard.substring(6, 4) +
+			identityCard.substr(6, 4) +
 			'/' +
-			identityCard.substring(10, 2) +
+			identityCard.substr(10, 2) +
 			'/' +
-			identityCard.substring(12, 2)
+			identityCard.substr(12, 2)
 	}
 	if (len == 15) {
 		var birthdayValue = ''
@@ -19,19 +19,19 @@ export function calcAgeByIdCard(identityCard: string): number {
 		if (parseInt(birthdayValue) < 10) {
 			strBirthday =
 				'20' +
-				identityCard.substring(6, 2) +
+				identityCard.substr(6, 2) +
 				'/' +
-				identityCard.substring(8, 2) +
+				identityCard.substr(8, 2) +
 				'/' +
-				identityCard.substring(10, 2)
+				identityCard.substr(10, 2)
 		} else {
 			strBirthday =
 				'19' +
-				identityCard.substring(6, 2) +
+				identityCard.substr(6, 2) +
 				'/' +
-				identityCard.substring(8, 2) +
+				identityCard.substr(8, 2) +
 				'/' +
-				identityCard.substring(10, 2)
+				identityCard.substr(10, 2)
 		}
 	}
 	//时间字符串里，必须是“/”

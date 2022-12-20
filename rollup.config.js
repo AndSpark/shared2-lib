@@ -34,7 +34,7 @@ export default [
 				format: 'esm',
 			},
 			{
-				file: input.replace('src/', 'dist/').replace('.ts', '.cjs'),
+				file: input.replace('src/', 'dist/').replace('.ts', '.js'),
 				format: 'cjs',
 			},
 		],
